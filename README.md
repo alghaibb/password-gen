@@ -2,7 +2,7 @@
 
 ## Description
 
-Welcome to <Random Password Generator>! This project aims to provide a simple yet powerful solution for generating secure and customizable random passwords. 
+Welcome to Random Password Generator! This project aims to provide a simple yet powerful solution for generating secure and customizable random passwords. 
 
 Motivation:
 I developed this project to empower users with the ability to create passwords that match their specific requirements. Rather than relying on default password generators, this tool puts users in control.
@@ -15,14 +15,14 @@ Throughout the development of this project, I learned about front-end web develo
 
 ## Installation
 
-To use <Random Password Generator>, follow these steps:
+To use Random Password Generator, follow these steps:
 
 1. Clone this repository to your local machine.
 2. Open the `index.html` file in your preferred web browser.
 
 ## Usage
 
-Here's how to use <Random Password Generator>:
+Here's how to use Random Password Generator:
 
 1. Launch the web page by opening the `index.html` file.
 2. Set your desired password length using the provided input field.
