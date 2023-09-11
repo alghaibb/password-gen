@@ -1,3 +1,4 @@
+/* Reset styles for all elements to start with a clean slate */
 * {
     margin: 0;
     padding: 0;
@@ -5,17 +6,20 @@
     box-sizing: border-box;
 }
 
+/* Set the overall styles for the body of the page */
 body {
     background: #002339;
     color: #fff;
 }
 
+/* Define styles for a container that centers content on the page */
 .container {
-    margin: 12%;
-    width: 90%;
-    max-width: 700px;
+    margin: 12%; /* Center the container on the page */
+    width: 90%; /* Set the width of the container */
+    max-width: 700px; /* Limit the maximum width of the container */
 }
 
+/* Define styles for a display box that contains a heading and input field */
 .display {
     width: 100%;
     margin-top: 50px;
@@ -29,22 +33,26 @@ body {
     border-radius: 5px;
 }
 
+/* Define styles for the main heading within the container */
 .container h1 {
     font-weight: 500;
     font-size: 45px;
 }
 
+/* Style a span within the heading with a different color and border */
 .container h1 span {
     color: #019f55;
     border-bottom: 4px solid #019f55;
     padding-bottom: 7px;
 }
 
+/* Define styles for an image within the display box */
 .display img {
     width: 30px;
     cursor: pointer;
 }
 
+/* Define styles for an input field within the display box */
 .display input {
     width: 100%;
     border: 0;
@@ -52,11 +60,13 @@ body {
     font-size: 24px;
 }
 
+/* Define styles for an image within a button within the container */
 .container button img {
     width: 28px;
     margin-right: 10px;
 }
 
+/* Define styles for a button within the container */
 .container button {
     border: 0;
     outline: 0;
@@ -72,12 +82,14 @@ body {
     cursor: pointer;
 }
 
+/* Define styles for labels within the container */
 .container label {
     display: block;
     margin-bottom: 5px;
     margin-top: 20px;
 }
 
+/* Define styles for a specific element with the ID "password-length" */
 .container #password-length {
     width: 60px;
     padding: 5px;
@@ -86,8 +98,3 @@ body {
     border-radius: 5px;
     text-align: center;
 }
-
-
-
-
-
