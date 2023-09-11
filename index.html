@@ -35,61 +35,72 @@
 
 <script>
 
- const passwordBox = document.getElementById("password");
- const length = "";
+ // Get references to HTML elements we will be working with
+const passwordBox = document.getElementById("password");
+const length = ""; // This variable is unused, consider removing it
 
- const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
- const lowerCase = "abcdefghijklmnopqrstuvwxyz";
- const number = "0123456789";
- const symbol = "!@#%^&*()_+~|}{[]></-="
+// Define character sets for password generation
+const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const lowerCase = "abcdefghijklmnopqrstuvwxyz";
+const number = "0123456789";
+const symbol = "!@#%^&*()_+~|}{[]></-=";
 
- const allChars = upperCase + lowerCase + number + symbol
+// Create a combined character set
+const allChars = upperCase + lowerCase + number + symbol;
 
- function createPassword() {
+// Function to generate a password based on user input
+function createPassword() {
+    // Get user input values
     const selectedLength = parseInt(document.getElementById("password-length").value);
     const includeUpper = document.getElementById("include-upper").checked;
     const includeLower = document.getElementById("include-lower").checked;
     const includeNumbers = document.getElementById("include-numbers").checked;
     const includeSymbols = document.getElementById("include-symbols").checked;
 
+    // Validate password length
     if (selectedLength < 4 || selectedLength > 32) {
         alert("Password length must be between 4 and 32 characters.");
         return;
     }
 
     let availableChars = "";
+
+    // Build the available characters based on user selections
     if (includeUpper) availableChars += upperCase;
     if (includeLower) availableChars += lowerCase;
     if (includeNumbers) availableChars += number;
     if (includeSymbols) availableChars += symbol;
 
+    // Check if at least one character set is selected
     if (availableChars === "") {
-        alert("Please select at least one character set.")
-        return
+        alert("Please select at least one character set.");
+        return;
     }
 
     let password = "";
-    
-    if (selectedLength >=4 && selectedLength <= 32) {
+
+    // Generate the password
+    if (selectedLength >= 4 && selectedLength <= 32) {
         password += includeUpper ? upperCase[Math.floor(Math.random() * upperCase.length)] : "";
         password += includeLower ? lowerCase[Math.floor(Math.random() * lowerCase.length)] : "";
         password += includeNumbers ? number[Math.floor(Math.random() * number.length)] : "";
         password += includeSymbols ? symbol[Math.floor(Math.random() * symbol.length)] : "";
-        
-        while(selectedLength > password.length) {
+
+        while (selectedLength > password.length) {
             password += availableChars[Math.floor(Math.random() * availableChars.length)];
-        
         }
-    
     }
 
-    passwordBox.value = password
- }
+    // Display the generated password in the input box
+    passwordBox.value = password;
+}
 
+// Function to copy the generated password to the clipboard
 function copyPassword() {
     passwordBox.select();
     document.execCommand("copy");
 }
+
 
 </script>
 
